@@ -12,15 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: yarnpkg/actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
+          cache: 'npm'
       - name: Install  ️ 
-        run: yarn install --no-frozen-lockfile
+        run:  npm install --no-frozen-lockfile
       - name: Build
-        run: yarn build
+        run: npm run build
       - name: Login to NPM registry
         run: echo "//registry.npmjs.org/:_authToken=\${NODE_AUTH_TOKEN}" > ~/.npmrc
       - name: Deploy 
-        run: yarn publish
+        run: npm publish

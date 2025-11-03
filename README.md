@@ -1,4 +1,4 @@
-# ysj-ui
+# @ysjdemo/ysj-ui
 
 ## Getting Started
 

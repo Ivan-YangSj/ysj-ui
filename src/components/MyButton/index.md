@@ -1,11 +1,10 @@
-
 ## MyButton
 
 Demo:
 
 ```tsx
 import React from 'react';
-import { MyButton } from 'ysj-ui';
+import { MyButton } from '@ysjdemo/ysj-ui';
 
 export default () => <MyButton text="MyButton" />;
 ```

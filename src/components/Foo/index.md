@@ -1,11 +1,10 @@
-
 ## Foo
 
 Demo:
 
 ```tsx
 import React from 'react';
-import { Foo } from 'ysj-ui';
+import { Foo } from '@ysjdemo/ysj-ui';
 
 export default () => <Foo title="First Demo" />;
 ```
