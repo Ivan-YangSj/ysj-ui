@@ -1,0 +1,26 @@
+name: CI Github Pages
+on:
+  push:
+    branches:
+      - main 
+
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'yarn'
+      - name: Install  ️ 
+        run: yarn install
+      - name: Build
+        run: yarn build
+      - name: Login to NPM registry
+        run: echo "//registry.npmjs.org/:_authToken=\${NODE_AUTH_TOKEN}" > ~/.npmrc
+      - name: Deploy 
+        run: yarn publish
