@@ -1,6 +1,7 @@
 {
   "name": "@ysjdemo/ysj-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "sideEffects": false,
   "scripts": {
     "start": "cross-env PORT=9000 NODE_OPTIONS=--openssl-legacy-provider dumi dev",
     "docs:build": "cross-env NODE_OPTIONS=--openssl-legacy-provider dumi build",
