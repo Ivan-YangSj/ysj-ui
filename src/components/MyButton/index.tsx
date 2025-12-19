@@ -9,7 +9,7 @@ export interface MyButtonProps extends ButtonProps {
 const MyButton = (props: MyButtonProps) => {
   return (
     <Button {...props}>
-      <span>123</span>
+      <span>1234</span>
       {props.text}
     </Button>
   );
